@@ -6,6 +6,7 @@
         "regex": "cpp",
         "*.tcc": "cpp",
         "list": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "ostream": "cpp"
     }
 }
