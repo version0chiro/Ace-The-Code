@@ -7,7 +7,8 @@ int gerReverseCount(vector<pii> adj[], int V, int E, int src, int dst)
 {
 
     vector<bool> visited(V + 1, false);
-    priority_queue<pii, vector<pii>, greater<pii>> pq;
+    queue<pii> pq;
+    // priority_queue<pii, vector<pii>, greater<pii>> pq;
     vector<int> distance(V + 1, INT_MAX);
     distance[src] = 0;
 
@@ -15,7 +16,7 @@ int gerReverseCount(vector<pii> adj[], int V, int E, int src, int dst)
 
     while (!pq.empty())
     {
-        int u = pq.top().second;
+        int u = pq.front().second;
 
         visited[u] = true;
 
