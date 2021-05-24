@@ -1,23 +1,24 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+typedef pair<int, int> pii;
 
-int getMinReversal(vector<pair<int, int>> adj[], int V, int E, int src, int dst)
+int gerReverseCount(vector<pii> adj[], int V, int E, int src, int dst)
 {
-    vector<bool> visited(V + 1);
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
-    vector<int> distances(V + 1, INT_MAX);
+    vector<bool> visited(V + 1, false);
+    priority_queue<pii, vector<pii>, greater<pii>> pq;
+    vector<int> distance(V + 1, INT_MAX);
+    distance[src] = 0;
 
     pq.push({0, src});
-
-    distances[src] = 0;
 
     while (!pq.empty())
     {
         int u = pq.top().second;
-        cout << u << endl;
+
         visited[u] = true;
+
         pq.pop();
         for (auto a : adj[u])
         {
@@ -26,42 +27,45 @@ int getMinReversal(vector<pair<int, int>> adj[], int V, int E, int src, int dst)
             if (!visited[v])
             {
                 int weight = a.second;
-                if (distances[v] > distances[u] + weight)
+
+                if (distance[v] > distance[u] + weight)
                 {
-                    distances[v] = distances[u] + weight;
-                    pq.push({distances[v], v});
+                    distance[v] = distance[u] + weight;
+                    pq.push({distance[v], v});
                 }
             }
         }
     }
 
-    if (distances[dst] == INT_MAX)
+    if (distance[dst] == INT_MAX)
     {
         return -1;
     }
     else
     {
-        return distances[dst];
+        return distance[dst];
     }
 }
 
 int main()
 {
-
     int V, E;
     cin >> V >> E;
-    vector<pair<int, int>> adj[V + 1];
+    vector<pii> adj[V + 1];
+
     for (int i = 0; i < E; i++)
     {
         int u, v;
         cin >> u >> v;
-
         adj[u].push_back({v, 0});
         adj[v].push_back({u, 1});
     }
-    int src, dest;
-    cin >> src >> dest;
-    cout << getMinReversal(adj, V, E, src, dest);
+
+    int src, dst;
+
+    cin >> src >> dst;
+
+    cout << gerReverseCount(adj, V, E, src, dst);
 
     return 0;
 }
