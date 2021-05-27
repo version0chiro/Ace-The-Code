@@ -1,3 +1,43 @@
+// Question: 
+
+// 0 - 1 Knapsack Problem :
+// You are given weights and values of N items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack. 
+// Note that we have only one quantity of each item.
+
+// Example 1:
+
+// Input:
+// N = 3
+// W = 4
+// values[] = {1,2,3}
+// weight[] = {4,5,1}
+// Output: 3
+// Example 2:
+
+// Input:
+// N = 3
+// W = 3
+// values[] = {1,2,3}
+// weight[] = {4,5,6}
+// Output: 0
+
+//Approch followed: memoization 
+
+
+// Memoization: Make a choice digram for recursion,
+//  this will consist of if you can include the element in the knapsack or not,
+//   check if the weight of current item is less than or equal to toal weight,
+//    if it is, return the max of recursive call of the same function including 
+//    the element (reduce the max Weight and n) or don;t include the element,
+//     this will oonly reduce n. And if the element's weight is more than current. don't include
+//      and call the function again with onoly n-1. for the DP part, initialize a global matrix and memset it to -1 
+//      in the main code. whenever you are going in any condition, make the matrix on basis of the dimension of the varibale 
+//      inputs of the recurisie function. Here it will be W and n, make a matrix of W+1 and n+1 dimension and for every recurvie 
+//      return, instead, store that value insdie that matrix,  before going into any call, check if 
+//      the value foor that W and n is soomething else than the initalize mem set value of the matrix, if so directly return that   
+
+
+
 // { Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
