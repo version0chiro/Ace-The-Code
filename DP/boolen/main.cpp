@@ -1,115 +1,107 @@
+// { Driver Code Starts
+// Initial Template for C++
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int dp[101][101][2];
-int parenthesis_count(string s,
-                      int i,
-                      int j,
-                      int isTrue)
-{
-    // Base Condition
-    if (i > j)
+ // } Driver Code Ends
+// User function Template for C++
+#include <bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+// User function Template for C++
+
+class Solution{
+public:
+    int t[1001][1001][2];
+    int solve(string S,int i,int j,int isTrue){
+        
+         if (i > j)
         return false;
-    if (i == j)
-    {
-        if (isTrue == 1)
-            return s[i] == 'T';
-        else
-            return s[i] == 'F';
-    }
-
-    if (dp[i][j][isTrue] != -1)
-        return dp[i][j][isTrue];
-    int ans = 0;
-    for (int k = i + 1; k <= j - 1; k = k + 2)
-    {
-        int leftF, leftT, rightT, rightF;
-        if (dp[i][k - 1][1] == -1)
-        {
-            leftT = parenthesis_count(s, i, k - 1, 1);
-        } // Count no. of T in left partition
-        else
-        {
-            leftT = dp[i][k - 1][1];
-        }
-
-        if (dp[k + 1][j][1] == -1)
-        {
-            rightT = parenthesis_count(s, k + 1, j, 1);
-        } // Count no. of T in right partition
-        else
-        {
-            rightT = dp[k + 1][j][1];
-        }
-
-        if (dp[i][k - 1][0] == -1)
-        {
-            // Count no. of F in left partition
-            leftF = parenthesis_count(s, i, k - 1, 0);
-        }
-        else
-        {
-            leftF = dp[i][k - 1][0];
-        }
-
-        if (dp[k + 1][j][0] == -1)
-        {
-            // Count no. of F in right partition
-            rightF = parenthesis_count(s, k + 1, j, 0);
-        }
-        else
-        {
-            rightF = dp[k + 1][j][0];
-        }
-
-        if (s[k] == '&')
-        {
+        
+        if (i == j) {
             if (isTrue == 1)
-                ans += leftT * rightT;
+                return S[i] == 'T';
             else
-                ans += leftF * rightF + leftT * rightF + leftF * rightT;
+                return S[i] == 'F';
         }
-        else if (s[k] == '|')
-        {
-            if (isTrue == 1)
-                ans += leftT * rightT + leftT * rightF + leftF * rightT;
+        
+        if(t[i][j][isTrue]!=-1){
+            return t[i][j][isTrue];
+        }
+        int ans=0;
+        
+        for(int k=i+1;k<j;k=k+2){
+            int lT,lF,rT,rF;
+            
+            if(t[i][k-1][1]!=-1)
+                lT=t[i][k-1][1];
             else
-                ans = ans + leftF * rightF;
-        }
-        else if (s[k] == '^')
-        {
-            if (isTrue == 1)
-                ans = ans + leftF * rightT + leftT * rightF;
+                lT = solve(S,i,k-1,1);
+            
+            if(t[i][k-1][0]!=-1)
+                lF=t[i][k-1][0];
             else
-                ans = ans + leftT * rightT + leftF * rightF;
+                lF = solve(S,i,k-1,0);
+            
+            if(t[k+1][j][1]!=-1)
+                rT=t[k+1][j][1];
+            else
+                rT = solve(S,k+1,j,1);
+            
+            if(t[k+1][j][0]!=-1)
+                rF=t[k+1][j][0];
+            else
+                rF = solve(S,k+1,j,0);
+            
+            if(S[k]=='&'){
+                if(isTrue){
+                    ans=ans+lT*rT;
+                }else{
+                    ans=ans+lF*rF+lT*rF+lF*rT;
+                }
+            }
+            else if(S[k]=='|'){
+                if(isTrue){
+                    ans=ans+lT*rT+lT*rF+lF*rT;
+                }else{
+                    ans=ans+lF*rF;
+                }
+            }else if(S[k]=='^'){
+                if(isTrue){
+                    ans=ans+lT*rF+rT*lF;
+                }else{
+                    ans=ans+lT*rT+rF*lF;
+                }
+            }
+            t[i][j][isTrue] = ans;
         }
-        dp[i][j][isTrue] = ans;
+        
+        return t[i][j][isTrue] = ans%1003;
     }
-    return ans;
-}
-
-// Driver Code
-int main()
-{
-    string symbols = "TTFT";
-    string operators = "|&^";
-    string s;
-    int j = 0;
-
-    for (int i = 0; i < symbols.length(); i++)
-    {
-        s.push_back(symbols[i]);
-        if (j < operators.length())
-            s.push_back(operators[j++]);
+    int countWays(int N, string S){
+        
+        memset(t,-1,sizeof(t));
+        return solve(S,0,S.size()-1,1);
+        // code here
+        
     }
+};
 
-    // We obtain the string T|T&F^T
-    int n = s.length();
+// { Driver Code Starts.
 
-    // There are 4 ways
-    // ((T|T)&(F^T)), (T|(T&(F^T))), (((T|T)&F)^T) and
-    // (T|((T&F)^T))
-    memset(dp, -1, sizeof(dp));
-    cout << parenthesis_count(s, 0, n - 1, 1);
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int N;
+        cin>>N;
+        string S;
+        cin>>S;
+        
+        Solution ob;
+        cout<<ob.countWays(N, S)<<"\n";
+    }
     return 0;
-}
+}  // } Driver Code Ends
