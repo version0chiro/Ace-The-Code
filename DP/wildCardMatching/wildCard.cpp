@@ -4,7 +4,7 @@ public:
         int n = s.size();
         int m = p.size();
 
-        vector<bool> t(n+1,vector<bool>(m+1,false));
+        vector<vector<bool>> t(n+1,vector<bool>(m+1,false));
 
         t[0][0]=true;
 

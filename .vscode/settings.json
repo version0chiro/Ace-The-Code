@@ -7,6 +7,7 @@
         "*.tcc": "cpp",
         "list": "cpp",
         "random": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "vector": "cpp"
     }
 }
