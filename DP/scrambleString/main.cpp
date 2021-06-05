@@ -1,3 +1,9 @@
+//approch:
+// alternatively compare the two halves of the strings recursively
+// aka: The first i elements of first string with last i elements of second string && last n-i elements of first string with first n-i elements of second string
+// and OR it with first i elements of first string with first i elements of second string && last n-i elements of first string with last n-i elements of second string
+// make key using both strings and space between them using an unordered_map as dp table
+
 class Solution {
 public:
     unordered_map<string,int> t;
