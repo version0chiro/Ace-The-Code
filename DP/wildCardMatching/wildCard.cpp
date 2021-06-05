@@ -18,7 +18,7 @@ public:
                     t[i][j]=t[i-1][j]||t[i][j-1];
                 }
 
-                else if(p[j-1]==s[i-1]){
+                else if(p[j-1]==s[i-1] || p[j-1]=='?'){
                     t[i][j]==t[i-1][j-1];
                 }
             }
