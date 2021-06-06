@@ -20,20 +20,24 @@ public:
             return 0;
         }
 
+        if (root->left == nullptr && root->right == nullptr)
+        {
+            return root->val;
+        }
+
         int l = solve(root->left);
         int r = solve(root->right);
 
         int temp = (root->val + max(l, r));
-        if (!root->left && !root->right)
+        if (root->left && root->right)
         {
-            temp = max(temp, root->val);
+            res = max(root->val + l + r, res);
+            return temp;
         }
-
-        int ans = max(temp, root->val + l + r);
-
-        res = max(ans, res);
-
-        return temp;
+        else
+        {
+            return (!root->left) ? r + root->val : l + root->val;
+        }
     }
     int maxPathSum(TreeNode *root)
     {
