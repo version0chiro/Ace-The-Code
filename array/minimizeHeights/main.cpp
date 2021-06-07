@@ -7,7 +7,6 @@ int getMinDiff(int arr[], int n, int k) {
             if (arr[i] >= k){
                 max_elem = max(arr[i-1] + k, arr[n-1] - k );
                 min_elem = min(arr[0] + k, arr[i] - k );
-                //cout << max_elem << " "<< min_elem<< endl;
                 ans = min(ans, max_elem - min_elem);
             }
             else continue;
