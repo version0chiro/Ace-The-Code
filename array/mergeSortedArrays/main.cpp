@@ -1,3 +1,6 @@
+// Take two pointers for arr1 and one pointer for array 2. init i=0 and k = n-1 for arr1 pointer and j=0 for array two's pointer, now traverse the array and at any point arr1[i]>arr2[j], swap arr2[j] with arr[k] k-- j++ else do i++. At last sort both the arrays
+
+
 // { Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
