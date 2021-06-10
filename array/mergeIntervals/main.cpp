@@ -1,3 +1,9 @@
+Approch:
+//Sort the given meets with the start times of the pairs.
+// Now make a new array to hold the ans and push the first interval inside, 
+//loop through the array from 1. If the interval at value i has start time greater than end time of the last element you inserted, insert 
+// the interval inside the answer vector, else , take the max of the  ending time of the lastt interval added vs end time of the interval at i and place it inside the last element in the answer vector's end time. return ans vector
+
 class Solution
 {
 public:
