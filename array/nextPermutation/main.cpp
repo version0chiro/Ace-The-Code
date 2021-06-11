@@ -1,3 +1,5 @@
+// Approch:start from the last element in reverse order, find the first element that is less than the element at right side of it . Set the last index to the element that is greater than element that was found earler. Swap these elements and reverse the vector from index t+1 to end
+
 class Solution
 {
 public:
