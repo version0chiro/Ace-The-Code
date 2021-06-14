@@ -1,35 +1,34 @@
-#include <bits/stdc++.h>
+class Solution
+{
+public:
+    int maxProfit(vector<int> &prices)
+    {
 
-using namespace std;
+        int n = prices.size();
+        vector<int> profit(prices.size(), 0);
 
-void findProfit(int arr[],int n){
-    int buy1=INT_MAX;
-    int buy2=INT_MAX;
-    int profit1=0;
-    int profit2=0;
-    for(int i=0;i<n;i++){
-        buy1=min(buy1,arr[i]);
-        profit1=max(profit1,arr[i]-buy1);
-        buy2=min(buy2,arr[i]-profit1);
-        profit2=max(profit2,arr[i]-buy2);
+        int max_price = prices[n - 1];
+
+        for (int i = n - 2; i >= 0; i--)
+        {
+            if (prices[i] > max_price)
+                max_price = prices[i];
+
+            profit[i] = max(profit[i + 1], max_price - prices[i]);
+        }
+
+        int min_price = prices[0];
+        for (int i = 1; i < n; i++)
+        {
+            if (prices[i] < min_price)
+                min_price = prices[i];
+
+            profit[i] = max(profit[i - 1], profit[i] + prices[i] - min_price);
+        }
+
+        int ans = profit[n - 1];
+        profit.clear();
+
+        return ans;
     }
-
-    cout<<profit2;
-}
-
-
-int main(){ 
-    int n;
-    cin>>n;
-
-    int arr[n];
-
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-
-    findProfit(arr,n);
-
-
-    return 0;
-}
+};
