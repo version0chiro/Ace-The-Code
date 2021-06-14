@@ -1,77 +1,58 @@
 // { Driver Code Starts
 #include <bits/stdc++.h>
-
 using namespace std;
 
- // } Driver Code Ends
-
-
-//User function template for C++
-class Solution{
+// } Driver Code Ends
+class Solution
+{
 public:
+	// arr[] : the input array
+	// N : size of the array arr[]
 
-	// Function to find maximum product subarray
-	long long maxProduct(int *arr, int n) {
-	    // code here
-	    long long  minSoFar=1;
-	    long long  maxSoFar=1;
-	    
-	    long long one=1;
-	    
-	    long long finalProd=0;
-	    bool flag=0;
-	    
-	    
-	    for(int i=0;i<n;i++){
-	        if(arr[i]>0){
-	            maxSoFar = maxSoFar*arr[i];
-	            minSoFar = min(minSoFar*arr[i],one);
-	            flag=1;
-	            
-	        }
-	        else if (arr[i]==0){
-	            maxSoFar=one;
-	            minSoFar=one;
-	        }
-	        else{
-	            long long temp = maxSoFar;
-	            maxSoFar=max(minSoFar*arr[i],one);
-	            minSoFar = temp*arr[i];
-	        }
-	        
-	        if(maxSoFar>finalProd){
-	            finalProd = maxSoFar;
-	        }
-	        
-	        
-	    }
-	    
-	    if(flag==0 && finalProd ==0){
-	        return 0;
-	    }
-	    
-	    return finalProd;
-	    
-	    
-	    
+	//Function to return length of longest subsequence of consecutive integers.
+	int findLongestConseqSubseq(int arr[], int N)
+	{
+		//Your code here
+		set<int> s;
+		for (int i = 0; i < N; i++)
+		{
+			s.insert(arr[i]);
+		}
+
+		int ans = INT_MIN;
+		int y;
+		for (auto a : s)
+		{
+			if (s.find(a - 1) == s.end())
+			{
+				y = a + 1;
+				while (s.find(y) != s.end())
+				{
+					y++;
+				}
+				ans = max(ans, y - a);
+			}
+		}
+
+		return ans;
 	}
 };
 
 // { Driver Code Starts.
 
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n, i;
-        cin >> n;
-        int arr[n];
-        for (i = 0; i < n; i++) {
-            cin >> arr[i];
-        }
-        Solution ob;
-        auto ans = ob.maxProduct(arr, n);
-        cout << ans << "\n";
-    }
-    return 0;
-}  // } Driver Code Ends
+// Driver program
+int main()
+{
+	int t, n, i, a[100001];
+	cin >> t;
+	while (t--)
+	{
+		cin >> n;
+		for (i = 0; i < n; i++)
+			cin >> a[i];
+		Solution obj;
+		cout << obj.findLongestConseqSubseq(a, n) << endl;
+	}
+
+	return 0;
+} // } Driver Code Ends
