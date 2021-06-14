@@ -4,50 +4,56 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// } Driver Code Ends
 
-bool subArrayExists(int arr[], int n);
+class Solution
+{
+public:
+    //Complete this function
+    //Function to check whether there is a subarray present with 0-sum or not.
+    bool subArrayExists(int arr[], int n)
+    {
+        int sum = 0;
+        unordered_map<int, int> m;
+        int tempSum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            sum += arr[i];
+            if (m.find(sum) != m.end())
+            {
+                return true;
+            }
+            m[sum]++;
+            if (sum == 0 || arr[i] == 0)
+            {
+                return true;
+            }
+        }
+
+        return false;
+
+        //Your code here
+    }
+};
+
+// { Driver Code Starts.
 // Driver code
 int main()
 {
-	int t;
-	cin>>t;
-	while(t--)
-	{
-	    int n;
-	    cin>>n;
-	    int arr[n];
-	    for(int i=0;i<n;i++)
-	    cin>>arr[i];
-	    	if (subArrayExists(arr, n))
-		cout << "Yes\n";
-	else
-		cout << "No\n";
-	}
-	return 0;
-}// } Driver Code Ends
-
-
-//Complete this function
-bool subArrayExists(int arr[], int n)
-{   set<int> sums;
-    int sum=0;
-    for(int i=0;i<n;i++){
-        if(arr[i]==0){return true;}
-        sum=sum+arr[i];
-        // cout<<sum<<" ";
-        if(sum==0){
-            return true;
-        }
-        if(sums.find(sum)==sums.end()){
-            sums.insert(sum);
-        }
-        else{
-            return true;
-        }
-        
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        int arr[n];
+        for (int i = 0; i < n; i++)
+            cin >> arr[i];
+        Solution obj;
+        if (obj.subArrayExists(arr, n))
+            cout << "Yes\n";
+        else
+            cout << "No\n";
     }
-    //Your code here
-    return false;
-}
-
-
+    return 0;
+} // } Driver Code Ends
