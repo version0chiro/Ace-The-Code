@@ -1,9 +1,3 @@
-
-// Init a start at zero and make a new variable for keeping the minimum value. Sort the array,
-// now traverse the array with start incremeneting till start+m-1<n. Find min between the variable for minimum and the current difference between the start+m and start. return the variable in the end.
-
-
-
 // { Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,23 +9,17 @@ public:
     long long findMinDiff(vector<long long> a, long long n, long long m)
     {
         //code
+        long long minDiff = INT_MAX;
         sort(a.begin(), a.end());
-
-        int start = 0;
-        int end = m;
-
-        int minDist = INT_MAX;
-        while (start < n - m + 1)
+        int i = 0;
+        while (i <= n - m)
         {
-            // cout<<a[start]<<" "<<a[start+m-1]<<"\n";
-            if (minDist > a[start + m - 1] - a[start])
-            {
-                minDist = a[start + m - 1] - a[start];
-            }
-            start++;
+            // if(minD)
+            minDiff = min(minDiff, a[i + m - 1] - a[i]);
+            i++;
         }
 
-        return minDist;
+        return minDiff;
     }
 };
 
