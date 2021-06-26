@@ -8,6 +8,8 @@
         "list": "cpp",
         "random": "cpp",
         "ostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
     }
 }
