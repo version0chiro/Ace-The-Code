@@ -57,8 +57,10 @@
 | 13     |         Trie          | 0/6            |
 | 14     |  Dynamic Programming  | 23/60          |
 | 15     |   Bit Manipulation    | 0/10           |
+ 
 
 ---
+ 
 <div style="text-align:center">
    <h2 style="text-align:center"> Theory Preparation </h2>
    
