@@ -61,8 +61,10 @@ You can also find explanation of various solutions on the right column, more wil
 | 13     |         Trie          | 0/6            |
 | 14     |  Dynamic Programming  | 23/60          |
 | 15     |   Bit Manipulation    | 0/10           |
+ 
 
 ---
+ 
 <div style="text-align:center">
    <h2 style="text-align:center"> Theory Preparation </h2>
    
@@ -78,7 +80,9 @@ You can also find explanation of various solutions on the right column, more wil
    |     8  |     SDLC    |  [here](https://www.tutorialspoint.com/sdlc/sdlc_quick_guide.htm)        |      
    
 </div>
+
 ---
+
 </p>
 <center>
 You may notice  a lot of the code files are missing and I apologize for that, when I was solving these questions I used online IDE's of leetcode and GFG and only had handful of the solution in file format. As time progress I will continue to add the solutions into the respective repositories.
