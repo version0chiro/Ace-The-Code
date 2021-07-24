@@ -59,8 +59,8 @@
 | 15     |   Bit Manipulation    | 0/10           |
 
 ---
-
-   <h2> Theory Preparation </h2>
+<div style="text-align:center">
+   <h2 style="text-align:center"> Theory Preparation </h2>
    
    |Sr. No | Topic | Links |
    |-------| -------| -------|
@@ -73,6 +73,7 @@
    |     7  |     SQL (Queries)   |  [here](https://www.techbeamers.com/sql-query-questions-answers-for-practice/)        |      
    |     8  |     SDLC    |  [here](https://www.tutorialspoint.com/sdlc/sdlc_quick_guide.htm)        |      
    
+</div>
 ---
 </p>
 <center>
