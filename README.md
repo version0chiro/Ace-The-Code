@@ -13,10 +13,21 @@
 
 <center><h2> What is this repository for? </h2> </center>
 
-<p> Coding interviews are tough and finding proper resources to solve questions and learn various programming concepts, This repository is a collection of multiple topics and most asked questions that I faced during my preparation for placements. This  repository follow's Love Babbar's DSA 450 sheet but questions from other resources are also welcome. I hope to make this project as open source as possible to provide help to a wide range of developers and students looking for a job.</p>
+<p> Coding interviews are tough and finding proper resources to solve questions and learn various programming concepts, This repository is a collection of multiple topics and most asked questions that I faced during my preparation for placements. This  repository follows  multiple resources that are popular for learning programming, including Love Babbar's 450 sheet, leetcode questions, etc .I hope to make this project as open source as possible to provide help to a wide range of developers and students looking for a job.</p>
 
 ---
+<center>
+<h2> For Leet-Code solution</h2>
 
+<h3>
+
+
+ </h3>
+</center>
+
+
+
+---
 <center>
 <h2> Topics covered so far from the DSA 450 in this repository</h2>
 
