@@ -19,6 +19,12 @@
 <center>
 <h2> For Leet-Code solution</h2>
 
+   [LeetCode](./Leet-Code-Question)
+ 
+ <h3> Count: 471/1940 ✅✅</h3>
+
+
+ </center>
 <h3>
 
 
@@ -74,6 +80,6 @@ Contributing to this project is really simple, it will not only help you become 
 
 <!-- Guidelines link will come here -->
 
-  [Contribution guidelines](https://github.com/version0chiro/dsa-450/blob/master/CONTRIBUTING.md)
+  [Contribution guidelines](./CONTRIBUTING.md)
 
 
