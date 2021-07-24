@@ -1,12 +1,11 @@
 <center><h1> Crack The Coding Interviews </h1> </center>
 
-<center>
 <img src="https://img.icons8.com/bubbles/100/000000/facebook-circled.png"/>
 <img src="https://img.icons8.com/bubbles/100/000000/amazon.png"/>
 <img src="https://img.icons8.com/bubbles/100/000000/mac-os.png"/>
 <img src="https://img.icons8.com/bubbles/100/000000/netflix.png"/>
 <img src="https://img.icons8.com/bubbles/100/000000/google-logo.png"/>
-</center>
+
 
 ---
 
