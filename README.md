@@ -76,7 +76,9 @@
    |     8  |     SDLC    |  [here](https://www.tutorialspoint.com/sdlc/sdlc_quick_guide.htm)        |      
    
 </div>
+
 ---
+
 </p>
 <center>
 You may notice  a lot of the code files are missing and I apologize for that, when I was solving these questions I used online IDE's of leetcode and GFG and only had handful of the solution in file format. As time progress I will continue to add the solutions into the respective repositories.
