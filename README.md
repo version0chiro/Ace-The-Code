@@ -32,6 +32,9 @@
 
 ---
 
+<p align="center">
+
+
 <center>
 <h2> Topics covered so far from the DSA 450 in this repository</h2>
 
@@ -42,7 +45,9 @@ You can also find explanation of various solutions on the right column, more wil
 <h3> Count: 289/450 ✅✅</h3>
 </center>
 
+</p>
 <p align="center">
+
 
 | Sr. No |        Topics         | Questions Done |
 | ------ | :-------------------: | -------------- |
