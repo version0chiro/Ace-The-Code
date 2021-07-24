@@ -3,6 +3,7 @@ FINAL450.xlsx
 .vscode/*
 .vscode
 *.code-workspace
+*.exe
 
 # Local History for Visual Studio Code
 .history/
