@@ -1,10 +1,12 @@
 <center><h1> Crack The Coding Interviews </h1> </center>
 
-<img src="https://img.icons8.com/bubbles/100/000000/facebook-circled.png"/>
-<img src="https://img.icons8.com/bubbles/100/000000/amazon.png"/>
-<img src="https://img.icons8.com/bubbles/100/000000/mac-os.png"/>
-<img src="https://img.icons8.com/bubbles/100/000000/netflix.png"/>
-<img src="https://img.icons8.com/bubbles/100/000000/google-logo.png"/>
+<center>
+<img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/facebook-circled.png"/>
+<img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/amazon.png"/>
+<img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/mac-os.png"/>
+<img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/netflix.png"/>
+<img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/google-logo.png"/>
+
 
 
 ---
@@ -57,7 +59,9 @@ All of the people who wants to contribute to the repository are also welcome to 
 
 <h2> Contributing To the Repository </h2>
 
-Contributing to this project is really simple, it will not only help you become more active in the open source community, but also help other people out in finding solutions to important coding questions 
+Contributing to this project is really simple, it will not only help you become more active in the open source community, but also help other people out in finding solutions to important coding questions! For more details about how to contribute to the project please visit the link below!
+
+<!-- Guidelines link will come here -->
 
 
 
