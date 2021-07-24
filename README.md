@@ -63,5 +63,6 @@ Contributing to this project is really simple, it will not only help you become 
 
 <!-- Guidelines link will come here -->
 
+  [Contribution guidelines](https://github.com/version0chiro/dsa-450/blob/master/CONTRIBUTING.md)
 
 
