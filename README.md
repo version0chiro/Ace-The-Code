@@ -23,7 +23,7 @@
 <h3> Count: 289/450 ✅✅</h3>
 </center>
 
-
+<p align="center">
 
 | Sr. No | Topics | Questions Done |
 | ----------- | :-----------: | ------- |
@@ -45,7 +45,7 @@
 
 
 ---
-
+</p>
 <center>
 You may notice  a lot of the code files are missing and I apologize for that, when I was solving these questions I used online IDE's of leetcode and GFG and only had handful of the solution in file format. As time progress I will continue to add the solutions into the respective repositories.
 
