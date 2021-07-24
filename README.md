@@ -1,6 +1,7 @@
-<center><h1> Crack The Coding Interviews </h1> </center>
+
 
 <p align="center">
+<center><h1> Crack The Coding Interviews </h1> </center>
 <img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/facebook-circled.png"/>
 <img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/amazon.png"/>
 <img style="float: center;" src="https://img.icons8.com/bubbles/100/000000/mac-os.png"/>
