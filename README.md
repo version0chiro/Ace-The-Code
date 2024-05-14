@@ -83,6 +83,7 @@ You can also find explanation of various solutions on the right column, more wil
    |     6  |     SQL (Inteview questions)   |  [here](https://www.youtube.com/watch?v=-WEpWH1NHGU)        |      
    |     7  |     SQL (Queries)   |  [here](https://www.techbeamers.com/sql-query-questions-answers-for-practice/)        |      
    |     8  |     SDLC    |  [here](https://www.tutorialspoint.com/sdlc/sdlc_quick_guide.htm)        |      
+   |     9  |     Web Development Roadmap    |  [here](https://www.scaler.com/blog/web-development-roadmap/)        |      
    
 </div>
 
